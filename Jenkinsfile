@@ -5,8 +5,9 @@ agent any
         stage('Build') {
             steps {
                 sh 'mvn -version'
-                sh 'mvn clean install'
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn clean'
+           //     sh 'mvn clean install'
+              //  sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
